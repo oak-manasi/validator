@@ -64,14 +64,15 @@ To build the application locally, follow these steps:
 - **Response:** `true` if the barcode is valid, `false` otherwise
 - **Example Request:**
    ```console
-        #for true Example:
-        curl --location "http://localhost:8080/validate" --header "Content-Type: application/json" --data "{\"barCode\": \"AA473124829GB\"}"
-        #for false example:
-        curl --location "http://localhost:8080/validate" --header "Content-Type: application/json" --data "{\"barCode\": \"AA473124829GB\"}"
+  # for true Example:
+    curl --location "http://localhost:8080/validate" --header "Content-Type: application/json" --data "{\"barCode\": \"AA473124829GB\"}"
+  
+  # for false example:
+    curl --location "http://localhost:8080/validate" --header "Content-Type: application/json" --data "{\"barCode\": \"AA473124829GB\"}"
    ```
 - **Example Response:**
    ```console
-        true/false
+    true/false
    ```
 
 
