@@ -24,6 +24,7 @@ To build the application locally, follow these steps:
 
     
 ### Option A: Using Maven to run the application locally
+
 3(A). Build the project using Maven:
    ```bash
     mvn clean install
@@ -33,8 +34,8 @@ To build the application locally, follow these steps:
     mvn spring-boot:run
  
 ### Option B: Docker To build and run the application using Docker
-##prequisites
-- Docker installed on your machine
+  prequisites
+    - Docker installed on your machine
 3(B) Build the Docker image:
    ```bash
    docker build -t barcode-validator .
@@ -49,42 +50,26 @@ To build the application locally, follow these steps:
 - **URL:** `/validate`
 - **Method:** `POST`
 - **Request Body with JSON:**
-     ```json
-        {
-            "barCode": "AA473124829GB"
-        }
+    ```json
+    {
+        "barCode": "AA473124829GB"
+    }
         ```   
 - **Response:** `true` if the barcode is valid, `false` otherwise
 - **Example Request:**
         ```
         #for true Example:
-        curl -X POST "http://localhost:8080/validate" -H "Content-Type: application/json" -d "{\"Code\": \"AA473124829GB\"}"
+        curl --location "http://localhost:8080/validate" --header "Content-Type: application/json" --data "{\"barCode\": \"AA473124829GB\"}"
         #for false example:
-        curl -X POST "http://localhost:8080/validate" -H "Content-Type: application/json" -d "{\"Code\": \"AA473124828GB\"}"
-        ```
-    - **Example Response:**
+        curl --location "http://localhost:8080/validate" --header "Content-Type: application/json" --data "{\"barCode\": \"AA473124829GB\"}"
+
+- **Example Response:**
         ```
         true/false
         ```
+
+
 ## Running Tests
 To run the unit tests, use the following Maven command:
 ```bash         
 mvn test
-```
-
-
-
-##docker To build and run the application using Docker, follow these steps:
-##prequisites
-- Docker installed on your machine
-## Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/oak-manasi/validator.git   ```
-2. Navigate to the project directory:
-   ```bash  
-    cd validator
-    ```
-
-    ```
-The application will be accessible at `http://localhost:8080`.
