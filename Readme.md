@@ -11,7 +11,7 @@ This project is a simple Barcode Validator application built using Spring Boot. 
 To run the application locally, follow these steps:
 1. Clone the repository:
    ```bash
-   git clone     
+   git clonehttps://github.com/oak-manasi/validator.git
    ```
 2. Navigate to the project directory:
    ```bash  
@@ -62,8 +62,7 @@ mvn test
 ## Steps
 1. Clone the repository:
    ```bash
-   git clone     
-   ```
+   git clonehttps://github.com/oak-manasi/validator.git   ```
 2. Navigate to the project directory:
    ```bash  
     cd validator
