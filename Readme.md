@@ -26,7 +26,7 @@ To build the application locally, follow these steps:
 ## Option A: Using Maven to run the application locally
 
 3(A). Build the project using Maven:
-    ```bash
+   ```bash
     mvn clean install
     ```  
 4(A). Run the application:
@@ -47,7 +47,7 @@ To build the application locally, follow these steps:
    ```
 
     5. The application will start on `http://localhost:8080`
-    
+
 ## API Endpoint
 - **Validate Barcode**
 - **URL:** `/validate`
