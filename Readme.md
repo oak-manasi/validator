@@ -23,15 +23,17 @@ To build the application locally, follow these steps:
     ```
 
     
-### Option A: Using Maven to run the application locally
+## Option A: Using Maven to run the application locally
 
 3(A). Build the project using Maven:
    ```bash
-    mvn clean install
-    ```  
+   mvn clean install
+   ```
+
 4(A). Run the application:
    ```bash
     mvn spring-boot:run
+    ```
  
 ### Option B: Docker To build and run the application using Docker
    ```bash
@@ -41,7 +43,7 @@ To build the application locally, follow these steps:
 3(B) Build the Docker image:
    ```bash
    docker build -t barcode-validator .
-   ```  
+   ```
 4(B)Run the Docker container:
    ```bash
     docker run -p 8080:8080 barcode-validator
@@ -58,23 +60,23 @@ To build the application locally, follow these steps:
     {
         "barCode": "AA473124829GB"
     }
-        ```   
+    ```
 - **Response:** `true` if the barcode is valid, `false` otherwise
 - **Example Request:**
-        ```
+        ```bash
         #for true Example:
         curl --location "http://localhost:8080/validate" --header "Content-Type: application/json" --data "{\"barCode\": \"AA473124829GB\"}"
         #for false example:
         curl --location "http://localhost:8080/validate" --header "Content-Type: application/json" --data "{\"barCode\": \"AA473124829GB\"}"
-
-- **Example Response:**
         ```
+- **Example Response:**
+        ```bash
         true/false
         ```
 
 
 ## Running Tests
 To run the unit tests, use the following Maven command:
-```bash         
+```bash
 mvn test
 ```
