@@ -7,8 +7,12 @@ This project is a simple Barcode Validator application built using Spring Boot. 
 ## Prerequisites
 - Java 17 or higher
 - Maven 3.6 or higher
+- (Optional) Docker for containerized deployment
+
+
 ## Getting Started
-To run the application locally, follow these steps:
+To build the application locally, follow these steps:
+    
 1. Clone the repository:
    ```bash
    git clone https://github.com/oak-manasi/validator.git
@@ -17,27 +21,41 @@ To run the application locally, follow these steps:
    ```bash  
     cd validator
     ```
-3. Build the project using Maven:
+
+    
+### Option A: Using Maven to run the application locally
+3(A). Build the project using Maven:
    ```bash
     mvn clean install
-    ```
-4. Run the application:
+    ```  
+4(A). Run the application:
    ```bash
     mvn spring-boot:run
-    ```
+ 
+### Option B: Docker To build and run the application using Docker
+##prequisites
+- Docker installed on your machine
+3(B) Build the Docker image:
+   ```bash
+   docker build -t barcode-validator .
+   ```  
+4(B)Run the Docker container:
+   ```bash
+    docker run -p 8080:8080 barcode-validator
+
 5. The application will start on `http://localhost:8080`.
 ## API Endpoint
 - **Validate Barcode**
-    - **URL:** `/validate`
-    - **Method:** `POST`
-    - **Request Body with JSON:**
-        ```json
+- **URL:** `/validate`
+- **Method:** `POST`
+- **Request Body with JSON:**
+     ```json
         {
             "barCode": "AA473124829GB"
         }
         ```   
-    - **Response:** `true` if the barcode is valid, `false` otherwise
-    - **Example Request:**
+- **Response:** `true` if the barcode is valid, `false` otherwise
+- **Example Request:**
         ```
         #for true Example:
         curl -X POST "http://localhost:8080/validate" -H "Content-Type: application/json" -d "{\"Code\": \"AA473124829GB\"}"
@@ -67,12 +85,6 @@ mvn test
    ```bash  
     cd validator
     ```
-3. Build the Docker image:
-   ```bash
-   docker build -t barcode-validator .
-   ```  
-4. Run the Docker container:
-   ```bash
-    docker run -p 8080:8080 barcode-validator
+
     ```
 The application will be accessible at `http://localhost:8080`.

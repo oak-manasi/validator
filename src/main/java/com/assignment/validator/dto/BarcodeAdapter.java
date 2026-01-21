@@ -12,7 +12,7 @@ public class BarcodeAdapter {
     private ValidatorService validatorService;
 
     public boolean validateBarCode(BarcodeDTO barcodeDTO) {
-        if (barcodeDTO == null || barcodeDTO.getBarCode() == null|| barcodeDTO.getBarCode() == "") {
+        if (barcodeDTO == null || barcodeDTO.getBarCode() == null|| barcodeDTO.getBarCode().isEmpty()) {
             return false;
         }
         return validatorService.isValidBarCode(barcodeDTO);
