@@ -36,10 +36,10 @@ To build the application locally, follow these steps:
    ```
  
 ## Option B: Docker To build and run the application using Docker
-   ```bash
+
   prequisites
     - Docker installed on your machine
-    ```
+
 3(B) Build the Docker image:
    ```bash
    docker build -t barcode-validator .
