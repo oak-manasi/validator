@@ -33,9 +33,9 @@ To build the application locally, follow these steps:
 4(A). Run the application:
    ```bash
     mvn spring-boot:run
-    ```
+   ```
  
-### Option B: Docker To build and run the application using Docker
+## Option B: Docker To build and run the application using Docker
    ```bash
   prequisites
     - Docker installed on your machine
