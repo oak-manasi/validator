@@ -57,16 +57,23 @@ mvn test
 
 
 ##docker To build and run the application using Docker, follow these steps:
-1. Build the Docker image:
+##prequisites
+- Docker installed on your machine
+## Steps
+1. Clone the repository:
+   ```bash
+   git clone     
+   ```
+2. Navigate to the project directory:
+   ```bash  
+    cd validator
+    ```
+3. Build the Docker image:
    ```bash
    docker build -t barcode-validator .
    ```  
-2. Run the Docker container:
+4. Run the Docker container:
    ```bash
     docker run -p 8080:8080 barcode-validator
     ```
 The application will be accessible at `http://localhost:8080`.
-
-
-
-
