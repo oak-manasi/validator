@@ -23,17 +23,18 @@ To build the application locally, follow these steps:
     ```
 
     
-### Option A: Using Maven to run the application locally
+## Option A: Using Maven to run the application locally
 
 3(A). Build the project using Maven:
-   ```bash
+    ```bash
     mvn clean install
     ```  
 4(A). Run the application:
    ```bash
     mvn spring-boot:run
+    ```
  
-### Option B: Docker To build and run the application using Docker
+## Option B: Docker To build and run the application using Docker
   prequisites
     - Docker installed on your machine
 3(B) Build the Docker image:
@@ -43,8 +44,10 @@ To build the application locally, follow these steps:
 4(B)Run the Docker container:
    ```bash
     docker run -p 8080:8080 barcode-validator
+   ```
 
-5. The application will start on `http://localhost:8080`.
+    5. The application will start on `http://localhost:8080`
+    
 ## API Endpoint
 - **Validate Barcode**
 - **URL:** `/validate`
