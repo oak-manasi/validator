@@ -47,11 +47,11 @@ To build the application locally, follow these steps:
 4(B)Run the Docker container:
    ```bash
     docker run -p 8080:8080 barcode-validator
-    ```
+   ```
 
-
-    5. The application will start on `http://localhost:8080`.
 ## API Endpoint
+    5. The application will start on `http://localhost:8080`.
+
 - **Validate Barcode**
 - **URL:** `/validate`
 - **Method:** `POST`
